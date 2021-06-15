@@ -23,6 +23,7 @@ const Home = ({ isAuthenticated, authentication }) => {
     setProducts([]);
     setUser(initialState);
   },[]);
+
   const getAllProducts = async (accessToken) => {
     const allProducts = await getProducts(accessToken);
     const userProfile = await profile(accessToken)
@@ -31,6 +32,7 @@ const Home = ({ isAuthenticated, authentication }) => {
       setUser(userProfile);
     }
   }
+  
   return (
     <div className={styles.outerDiv}>
       { isAuthenticated && <div>

@@ -30,7 +30,6 @@ const login = ( { setIsAuthenticated } ) => {
     } else {
       const { accessToken } = res;
       localStorage.setItem('accessToken', accessToken);
-      //set authentication prop
       setIsAuthenticated(true);
       setState(initialState);
       router.push('/')     
