@@ -26,6 +26,8 @@ export const getProductById = (accessToken, id) => {
         .catch(err => console.log(err));
 };
 
+//testing Vercel
+
 export const createProduct = (accessToken,productDetails) => {
     return fetch(`${BASE_URL}/seller`, {
         method: 'POST',
