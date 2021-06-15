@@ -1,0 +1,63 @@
+.outerDiv {
+    background-color: rgba(214, 240, 221, 0.726);
+    /* background-image: url("https://www.wallpaperuse.com/wallp/87-877393_m.jpg"); */
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -100;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.heading1 {
+    margin: 0;
+    align-self: center;
+    color: rgb(0, 150, 65);
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.input {
+    margin: 0.5rem;
+    width: 17rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-self: center;
+    border-radius: 5rem;
+    font-size: medium;
+    border-color: rgb(77, 226, 84);
+    background-color:rgb(249, 253, 247);
+}
+
+.input:focus {
+    outline: none;
+} 
+
+.label {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    color: rgb(0, 150, 65);
+}
+
+.buttonRow {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 0.5rem;
+    font-size: large;
+    width: 8rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background-color:rgb(249, 253, 247);
+    border-color: rgb(77, 226, 84);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.button:hover {
+    background-color:rgba(233, 255, 215, 0.884) ;
+    color: rgb(50, 248, 0);
+}

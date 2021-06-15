@@ -1,0 +1,36 @@
+{
+  "name": "farmers-market-place",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhruvang1996/Farmers-Market-Place.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dhruvang1996/Farmers-Market-Place/issues"
+  },
+  "homepage": "https://github.com/Dhruvang1996/Farmers-Market-Place#readme",
+  "dependencies": {
+    "next": "^10.2.3",
+    "react": "^17.0.2",
+    "reeact-dom": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  }
+}
