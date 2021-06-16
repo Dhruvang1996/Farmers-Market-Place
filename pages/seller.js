@@ -149,7 +149,7 @@ const seller = ( { isAuthenticated, authentication } ) => {
                         <tr>
                             <td><div className={styles.label}><label htmlFor="province">Province :</label></div></td>
                             <td><input className={styles.input} type="text" id="province" name="province" 
-                                        value={state.province} onChange={handleChange} placeholder="lbs."
+                                        value={state.province} onChange={handleChange} placeholder="province"
                                         autoComplete="off"/></td>
                         </tr>
                         <tr>
