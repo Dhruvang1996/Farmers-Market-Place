@@ -25,6 +25,8 @@ const myProduct = () => {
     } 
   },[myProducts]);
 
+  //set state
+
   const getUser = async (accessToken) => {
     const userProfile = await profile(accessToken);
     if (userProfile) {
