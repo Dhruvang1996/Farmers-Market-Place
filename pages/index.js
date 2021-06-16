@@ -26,7 +26,7 @@ const Home = ({ isAuthenticated, authentication }) => {
 
   const getAllProducts = async (accessToken) => {
     const allProducts = await getProducts(accessToken);
-    const userProfile = await profile(accessToken)
+    const userProfile = await profile(accessToken);
     if (allProducts && userProfile) {
       setProducts(() => [...allProducts]);
       setUser(userProfile);
@@ -36,9 +36,9 @@ const Home = ({ isAuthenticated, authentication }) => {
   return (
     <div className={styles.outerDiv}>
       { isAuthenticated && <div>
-        <Navbar user={user}/>
+        <Navbar/>
         <div>
-          { products ? <ProductList products={products}/> : 
+          { products ? <ProductList products={products} user={user}/> : 
             <h2>No Products Available</h2>}
         </div>
       </div>}

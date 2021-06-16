@@ -1,10 +1,10 @@
 import Navbar from '../components/Navbar';
 import React,{ useEffect, useState } from 'react';
-import {profile, getCartProducts} from '../Service/apiService';
-import CartList from '../components/CartList';
+import {profile, getMyProducts} from '../Service/apiService';
+import MyList from '../components/MyList';
 import styles from '../styles/Cart.module.css';
 
-const cart = () => {
+const myProduct = () => {
 
   const initialState1 = {
     firstName: '',
@@ -13,7 +13,7 @@ const cart = () => {
   };
 
   const [user, setUser] = useState(initialState1);
-  const [cartProducts, setCartProducts] = useState([]);
+  const [myProducts, setMytProducts] = useState([]);
 
   useEffect( async () => {
     const accessToken = localStorage.getItem('accessToken');
@@ -21,23 +21,22 @@ const cart = () => {
     
     if (userData) {
       const {email} = userData;
-      getAllcartProducts(accessToken,email)
+      getAllMyProducts(accessToken,email)
     } 
-  },[cartProducts]);
+  },[myProducts]);
 
   const getUser = async (accessToken) => {
     const userProfile = await profile(accessToken);
     if (userProfile) {
         setUser(userProfile);
     }
-
     return userProfile;
   }
 
-  const getAllcartProducts = async (accessToken,email) => {
-    const allCartProducts = await getCartProducts(accessToken,email);
-    if (allCartProducts) {
-      setCartProducts([...allCartProducts]);
+  const getAllMyProducts = async (accessToken,email) => {
+    const allMyProducts = await getMyProducts(accessToken,email);
+    if (allMyProducts) {
+        setMytProducts([...allMyProducts]);
     }
   }
 
@@ -45,10 +44,10 @@ const cart = () => {
     <div className={styles.outerDiv}>
         <Navbar/>
         <div>
-          <CartList cartProducts={cartProducts}/> 
+          <MyList myProducts={myProducts}/> 
         </div>
     </div>
   )
 }
-  
-export default cart;
+
+export default myProduct;

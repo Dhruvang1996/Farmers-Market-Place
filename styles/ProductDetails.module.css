@@ -6,6 +6,7 @@
     height: 100vh;
     width: 100vw;
     background-color: rgba(214, 240, 221, 0.726);
+    justify-content: center;
 }
 
 .innerDiv1 {
@@ -22,10 +23,37 @@
 
 .innerDiv2 {
     margin-top: 2rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
 
 }
 
 .innerDiv2 h2 {
     margin: 0;
+}
+
+.innerDiv3 button {
+    margin-top: 2rem;
+    margin-left: 3rem;
+    border-color: rgb(0, 150, 65);
+    background-color: rgba(128, 250, 189, 0.726);
+    border-radius: 0.3rem;
+    width: 16vw;
+}
+
+.goBack {
+    margin-top: 0.3rem;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(0, 150, 65);
+    background-color: #f4f4f4;
+    padding: 6px 16px;
+    border: 1px solid #171717;
+    font-size: 1rem;
+}
+
+.goBack:hover {
+    background: #171717;
+    color: #f4f4f4;
 }

@@ -16,13 +16,16 @@ const seller = ( { isAuthenticated, authentication } ) => {
         email:'',
         price:'',
         quantity:'',
-        description:'',
+        productDescription:'',
+        productName:'',
+        city:'',
+        province:'',
     }
 
     const initialState1 = {
         firstName: '',
         lastName: '',
-      };
+    };
 
     const [state, setState] = useState(initialState);
     const [file, setFile] = useState(null);
@@ -64,8 +67,8 @@ const seller = ( { isAuthenticated, authentication } ) => {
     const submitHandler = (e) => {
         e.preventDefault();
         const accessToken = localStorage.getItem('accessToken')
-        const {firstName,lastName,email,price,quantity,description} = state;
-        const productDetails = {firstName,lastName,email,price,quantity,description,imageUrl:url};
+        const {firstName,lastName,email,price,quantity,productDescription,productName,city,province} = state;
+        const productDetails = {firstName,lastName,email,price,quantity,productDescription,productName,city,province,imageUrl:url};
         createProduct(accessToken, productDetails);
         setState(initialState);
         setFile(null);
@@ -76,8 +79,9 @@ const seller = ( { isAuthenticated, authentication } ) => {
         if (file && url) {
             return !state.firstName || !state.lastName || 
                     !state.email || !state.price || 
-                    !state.quantity || !state.description ||
-                    !url;
+                    !state.quantity || !state.productDescription ||
+                    !state.city || !state.productName ||
+                    !state.province || !url;
         }
         return true;
     };
@@ -85,7 +89,7 @@ const seller = ( { isAuthenticated, authentication } ) => {
     return (
       <>
       {isAuthenticated && <div>
-          <Navbar user={user}/>
+          <Navbar/>
           <div className={styles.outerDiv}>
           <div>
             <h1 className={styles.heading1}>Seller Details</h1>
@@ -113,21 +117,39 @@ const seller = ( { isAuthenticated, authentication } ) => {
                                        autoComplete="off"/></td>
                         </tr>
                         <tr>
+                            <td><div className={styles.label}><label htmlFor="productName">Product Name :</label></div></td>
+                            <td><input className={styles.input} type="text" id="productName" name="productName" 
+                                        value={state.productName} onChange={handleChange} placeholder="Product Name"
+                                        autoComplete="off"/></td>
+                        </tr>
+                        <tr>
                             <td><div className={styles.label}><label htmlFor="price">Price :</label></div></td>
-                            <td><input className={styles.input} type="text" id="price" name="price" 
+                            <td><input className={styles.input} type="number" id="price" name="price" 
                                         value={state.price} onChange={handleChange} placeholder="CAD /lb"
                                         autoComplete="off"/></td>
                         </tr>
                         <tr>
                             <td><div className={styles.label}><label htmlFor="quantity">Quantity :</label></div></td>
-                            <td><input className={styles.input} type="text" id="quantity" name="quantity" 
+                            <td><input className={styles.input} type="number" id="quantity" name="quantity" 
                                         value={state.quantity} onChange={handleChange} placeholder="lbs."
                                         autoComplete="off"/></td>
                         </tr>
                         <tr>
-                            <td><div className={styles.label}><label htmlFor="description">Desription :</label></div></td>
-                            <td><input className={styles.input} type="text" id="description" name="description" 
-                                        value={state.description} onChange={handleChange} placeholder="Product Name"
+                            <td><div className={styles.label}><label htmlFor="productDescription">Desription :</label></div></td>
+                            <td><textarea className={styles.textarea} type="text" id="productDescription" name="productDescription" 
+                                        onChange={handleChange} placeholder="Product Description"
+                                        autoComplete="off">{state.productDescription}</textarea></td>
+                        </tr>
+                        <tr>
+                            <td><div className={styles.label}><label htmlFor="city">City :</label></div></td>
+                            <td><input className={styles.input} type="text" id="city" name="city" 
+                                        value={state.city} onChange={handleChange} placeholder="city"
+                                        autoComplete="off"/></td>
+                        </tr>
+                        <tr>
+                            <td><div className={styles.label}><label htmlFor="province">Province :</label></div></td>
+                            <td><input className={styles.input} type="text" id="province" name="province" 
+                                        value={state.province} onChange={handleChange} placeholder="lbs."
                                         autoComplete="off"/></td>
                         </tr>
                         <tr>

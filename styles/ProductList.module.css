@@ -11,6 +11,11 @@
     margin-left: 8px;
 }
 
+.emptyCartScreenProducts {
+    margin-left: .5rem;
+    color: rgb(0, 150, 65);
+}
+
 .homeScreenProducts {
    display: grid; 
    grid-template-columns: repeat(5,1fr);

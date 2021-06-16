@@ -26,7 +26,18 @@ export const getProductById = (accessToken, id) => {
         .catch(err => console.log(err));
 };
 
-//testing Vercel
+export const getMyProducts = (accessToken, email) => {
+    return fetch(`${BASE_URL}/products/myList/${email}`, {
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+            'Content-Type' : 'application/json',
+            Authorization : `Bearer ${accessToken}`
+        },
+    })
+        .then(res => res.json())
+        .catch(err => console.log(err));
+};
 
 export const createProduct = (accessToken,productDetails) => {
     return fetch(`${BASE_URL}/seller`, {
@@ -40,6 +51,59 @@ export const createProduct = (accessToken,productDetails) => {
     })
     .then((res) => res.json())
     .catch((err) => console.log(err));
+};
+
+export const addToCart = (accessToken,id,email) => {
+    return fetch(`${BASE_URL}/cart/${id}/${email}`, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Content-Type' : 'application/json',
+            Authorization : `Bearer ${accessToken}`
+        },
+    })
+    .then((res) => res.json())
+    .catch((err) => console.log(err));
+};
+
+export const removeFromCart = (accessToken,id) => {
+    return fetch(`${BASE_URL}/cart/${id}`, {
+        method: 'DELETE',
+        mode: 'cors',
+        headers: {
+            'Content-Type' : 'application/json',
+            Authorization : `Bearer ${accessToken}`
+        },
+    })
+    // .then((res) => res.json())
+    .catch((err) => console.log(err));
+};
+
+export const removeProduct = (accessToken,id) => {
+    console.log(id)
+    return fetch(`${BASE_URL}/myList/${id}`, {
+        method: 'DELETE',
+        mode: 'cors',
+        headers: {
+            'Content-Type' : 'application/json',
+            Authorization : `Bearer ${accessToken}`
+        },
+    })
+    // .then((res) => res.json())
+    .catch((err) => console.log(err));
+};
+
+export const getCartProducts = (accessToken, email) => {
+    return fetch(`${BASE_URL}/cart/${email}`, {
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+            'Content-Type' : 'application/json',
+            Authorization : `Bearer ${accessToken}`
+        },
+    })
+        .then(res => res.json())
+        .catch(err => console.log(err));
 };
 
 export const loginService = (user) => {

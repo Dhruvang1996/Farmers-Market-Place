@@ -1,12 +1,11 @@
 .outerDiv {
+    top:10vh;
     background-color: rgba(214, 240, 221, 0.726);
-    /* background-image: url("https://www.wallpaperuse.com/wallp/87-877393_m.jpg"); */
     height:100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: -100;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -24,15 +23,37 @@
     padding: 0.5rem;
     display: flex;
     justify-self: center;
-    border-radius: 5rem;
+    border-radius: 1rem;
     font-size: medium;
     border-color: rgb(77, 226, 84);
     background-color:rgb(249, 253, 247);
 }
 
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 .input:focus {
     outline: none;
 } 
+
+.textarea {
+    margin: 0.5rem;
+    width: 17rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-self: center;
+    border-radius: 1rem;
+    font-size: large;
+    border-color: rgb(77, 226, 84);
+    background-color:rgb(249, 253, 247);
+    resize: none;
+    height: 5rem;
+}
+
+.textarea:focus {
+    outline: none;
+}
 
 .label {
     display: flex;
@@ -51,7 +72,7 @@
     font-size: large;
     width: 8rem;
     padding: 0.5rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     background-color:rgb(249, 253, 247);
     border-color: rgb(77, 226, 84);
     font-family: 'Times New Roman', Times, serif;

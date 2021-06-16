@@ -13,7 +13,7 @@
 }
 
 .product:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .product img {
@@ -30,13 +30,14 @@
 }
 
 .infoName {
-    font-size: 1rem;
+    font-size: 1.5rem;
     overflow: hidden;
     font-weight: bold;
 }
 
 .infoDescription {
     font-size: 0.8rem;
+    overflow: hidden;
 }
 
 .infoButton {
@@ -46,12 +47,30 @@
     text-align: center;
     color: rgb(0, 150, 65);
     background-color: #f4f4f4;
-    padding: 8px 16px;
+    padding: 6px 16px;
+    border: 1px solid #171717;
+    font-size: 1rem;
+}
+
+.infoAddtoCart {
+    margin-top: 0.3rem;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(0, 150, 65);
+    background-color: #f4f4f4;
+    padding: 6px 16px;
     border: 1px solid #171717;
     font-size: 1rem;
 }
 
 .infoButton:hover {
+    background: #171717;
+    color: #f4f4f4;
+}
+
+.infoAddtoCart:hover {
     background: #171717;
     color: #f4f4f4;
 }
