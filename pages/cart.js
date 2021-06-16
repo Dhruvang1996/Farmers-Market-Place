@@ -3,6 +3,7 @@ import React,{ useEffect, useState } from 'react';
 import {profile, getCartProducts} from '../Service/apiService';
 import CartList from '../components/CartList';
 import styles from '../styles/Cart.module.css';
+import { useAuthentication } from '../Hooks/useAuth';
 
 const cart = (authentication) => {
 
