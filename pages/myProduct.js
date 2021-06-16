@@ -4,7 +4,9 @@ import {profile, getMyProducts} from '../Service/apiService';
 import MyList from '../components/MyList';
 import styles from '../styles/Cart.module.css';
 
-const myProduct = () => {
+const myProduct = ({authentication}) => {
+
+  useAuthentication(authentication);
 
   const initialState1 = {
     firstName: '',
