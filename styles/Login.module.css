@@ -19,12 +19,14 @@
 
 .innerDiv {
     display: flex;
+    padding: 4rem 2rem;
     flex-direction: column;
     justify-content: center;
     justify-self: center;
     align-content: center;
-    height: 45vh;
-    width: 35vh;
+    
+    /* height: 45vh;
+    width: 35vh; */
     z-index: 100;
     background-color:rgba(220, 250, 211, 0.74);
     border-radius: 1rem;
@@ -49,7 +51,8 @@
 
 .input {
     margin: 0.5rem;
-    width: 15vw;
+    /* width: 15vw; */
+    min-width: 12rem;
     padding: 0.5rem;
     display: flex;
     justify-self: center;
@@ -67,7 +70,8 @@
     margin: 0.1vmin;
     margin-bottom: 1.5vh;
     font-size: large;
-    width: 7vw;
+    /* width: 7vw; */
+    min-width: 6rem;
     padding: 0.5rem;
     display: flex;
     justify-content: center;
