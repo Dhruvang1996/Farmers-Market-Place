@@ -1,6 +1,8 @@
 .outerDiv {
     background-image: url("https://farmhacker.com/wp-content/uploads/2020/03/dirt-road-between-fences-and-beautiful-sunset-farm-background-wallpaper-pictures.jpg");
-    height:100vh;
+    /* height:100vh; */
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,8 +25,7 @@
     flex-direction: column;
     justify-content: center;
     justify-self: center;
-    align-content: center;
-    
+    align-content: center;   
     /* height: 45vh;
     width: 35vh; */
     z-index: 100;
